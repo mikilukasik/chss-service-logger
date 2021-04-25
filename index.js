@@ -1,7 +1,7 @@
 export const clientLogger = ({ msgClient }) => {
   if (!self) return;
 
-  const loggerSocket = msgClient.ws(`ws://${typeof window === 'undefined' || window.location.hostname}:3300/logger`);
+  const loggerSocket = msgClient.ws(`ws://${typeof self === 'undefined' || self.location.hostname}:3300/logger`);
 
   self.onerror = (message, source, lineno, colno, error) => loggerSocket.do('storeLog', { type: 'error', message, source, lineno, colno, error, stack: error.stack });
   self.addEventListener('error', (e) => {
