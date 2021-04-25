@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mikilukasik/chss-service-logger/issues"
   },
-  "homepage": "https://github.com/mikilukasik/chss-service-logger#readme"
+  "homepage": "https://github.com/mikilukasik/chss-service-logger#readme",
+  "dependencies": {
+    "mongodb": "^3.6.6"
+  }
 }
